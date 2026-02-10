@@ -65,7 +65,7 @@ Projet_java/
 │       └── rapport_stock.jrxml
 ├── Jasper/
 └── out/
-
+```
 ---
 
 ## Installation and Configuration
