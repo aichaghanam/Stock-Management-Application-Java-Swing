@@ -2,19 +2,18 @@
 
 ## Description
 
-This application is a stock management system developed in Java with a Swing graphical user interface and a layered architecture based on the DAO (Data Access Object) pattern.
+This application is a stock management system developed in Java using a Swing graphical user interface and a layered architecture based on the DAO (Data Access Object) pattern.
 
-It allows management of products, stock movements, operation history, and report generation using JasperReports.
-Data is stored in a MySQL database.
+It allows users to manage products, stock movements, operation history, and generate reports using JasperReports. All data is stored in a MySQL database.
 
 ---
 
 ## Project Objectives
 
 - Practice object-oriented programming in Java
-- Implement the DAO architecture pattern
+- Implement the DAO architectural pattern
 - Connect a Java application to a MySQL database using JDBC
-- Generate reports using JasperReports
+- Generate professional reports using JasperReports
 - Design a complete graphical user interface with Java Swing
 
 ---
@@ -26,7 +25,7 @@ Data is stored in a MySQL database.
 - Delete a product
 - Display the list of products
 - Manage stock entries and exits
-- View movement history
+- View stock movement history
 - Display statistics
 - Generate stock reports in PDF format
 
@@ -42,7 +41,7 @@ Data is stored in a MySQL database.
 - DAO Architecture
 
 ---
-````markdown
+
 ## Project Structure
 
 ```text
@@ -66,6 +65,7 @@ Projet_java/
 ├── Jasper/
 └── out/
 ```
+
 ---
 
 ## Installation and Configuration
@@ -76,8 +76,11 @@ Projet_java/
 - MySQL Server
 - A Java IDE (IntelliJ IDEA, Eclipse, NetBeans, etc.)
 
-### 2. Database Creation
+### 2. Database Setup
 
+Run the following SQL commands:
+
+```sql
 CREATE DATABASE gestion_stock;
 
 CREATE TABLE produit (
@@ -95,25 +98,39 @@ CREATE TABLE mouvement (
     date_mouvement TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (produit_id) REFERENCES produit(id)
 );
+```
 
-### 3. Database Connection Configuration
+### 3. Configure Database Connection
 
-Modify the file src/utils/DatabaseConnection.java:
+Edit the file:
 
+src/utils/DatabaseConnection.java
+
+Update your database credentials:
+
+```java
 String url = "jdbc:mysql://localhost:3306/gestion_stock";
 String user = "root";
 String password = "your_password";
+```
 
-### 4. Running the Application
+### 4. Run the Application
 
-Run the MenuPrincipal.java class.
+Execute:
+
+MenuPrincipal.java
+
+This is the entry point of the application.
 
 ---
 
 ## Report Generation
 
-The file rapport_stock.jrxml located in the reports folder is used to generate stock reports using JasperReports.
-Reports can be exported in PDF format.
+The file:
+
+src/reports/rapport_stock.jrxml
+
+is used to generate stock reports using JasperReports. Reports can be exported in PDF format.
 
 ---
 
@@ -121,12 +138,12 @@ Reports can be exported in PDF format.
 
 The project follows the DAO pattern:
 
-- DAO: Data access management
-- UI: User interface
-- Utils: Database connection management
-- Reports: Report generation
+- DAO: Handles database access
+- UI: Manages the graphical interface
+- Utils: Handles database connection
+- Reports: Manages report generation
 
-This structure ensures clear separation of responsibilities and easier project maintenance.
+This structure ensures clear separation of responsibilities and easier maintenance.
 
 ---
 
@@ -140,4 +157,4 @@ Year: 2024
 
 ## License
 
-Educational use only.
+This project is for educational purposes only.
