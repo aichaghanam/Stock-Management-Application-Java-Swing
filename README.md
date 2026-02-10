@@ -42,7 +42,7 @@ Data is stored in a MySQL database.
 - DAO Architecture
 
 ---
-
+````markdown
 ## Project Structure
 
 ```text
