@@ -45,13 +45,12 @@ Data is stored in a MySQL database.
 
 ## Project Structure
 
+```text
 Projet_java/
-│
 ├── src/
 │   ├── DAO/
 │   │   ├── ProduitDAO.java
 │   │   └── MouvementDAO.java
-│   │
 │   ├── ui/
 │   │   ├── MenuPrincipal.java
 │   │   ├── AjouterProduitSwing.java
@@ -60,13 +59,10 @@ Projet_java/
 │   │   ├── MouvementStockSwing.java
 │   │   ├── HistoriqueMouvementsSwing.java
 │   │   └── FenetreStatistiques.java
-│   │
 │   ├── utils/
 │   │   └── DatabaseConnection.java
-│   │
 │   └── reports/
 │       └── rapport_stock.jrxml
-│
 ├── Jasper/
 └── out/
 
